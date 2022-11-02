@@ -1,0 +1,89 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+	background-color: #1e1e1e;
+font-family: 'Source Code Pro', monospace;
+}
+
+#modal {
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 12px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#modal div {
+    display: inline-block;
+    color: white;
+}
+
+#modal a {
+    color: white;
+}
+
+#titulo {
+	float: center;
+	margin-top: 13px;
+	display: inline-block;
+}
+
+#lipa {
+
+	display: inline-block;
+float: left;
+}
+
+#op {
+    position: absolute;
+    right: 0;
+    margin-top: 16px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#acad {
+    margin-top: 85vh;
+}
+
+#badi {
+    text-align: center;
+}
+
+#main {
+    padding-left: 50px;
+    text-align: center;
+    background-color: #1e1e1e;
+    padding-top: 100px;
+}
+
+#main p {
+    display: inline-block;
+}
+
+#main a {
+    display: inline-block;
+}
+
+#main img {
+    display: inline-block;
+}
+
+#header {
+	text-align: center;
+    position: fixed;
+    background-color: #363636;
+    height: 50px;
+    width: 100%;
+}
+
+#sidebar {
+    margin-top: 50px;
+    position: fixed;
+    background-color: #272726;
+    width: 50px;
+    height: 100vh;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+    <title>Academia</title>
+</head>
+
+<body>
+    <div id="header">
+        <a href="http://tintadeimpressoradownload.blogspot.com/" id="lipa" onclick="search"><img src="lupa.svg" alt="lupa" width="50" height="50"></a>
+        <div id="titulo">Início</div>
+        <div id="op" onclick="escolha()"><img src="settings.svg" alt="settings" width="50" height="50"></div>
+        <div id="modal">
+            <a href="./contato.html" id="contato"></a>
+            <div id="slash"></div>
+            <a href="./revista.html" id="revista"></a>
+        </div>
+    </div>
+    <div id="sidebar">
+        <div id="acad">
+            <a href="https://fundacaolemann.org.br/institucional/quem-somos"><img src="acad.svg" alt="acad" width="50" height="50"></a>
+            
+        </div>
+    </div>
+    <div id="main">
+        <a href="https://www.instagram.com/cirogomes">Instagram</a>
+        <a href="https://twitter.com/cirogomes">Twitter</a>
+        <a href="https://www.youtube.com/c/CiroGomesOficial">Youtube</a>
+    </div>
+    <script>
+        
+        var timeouts = [];
+        ind = 0
+    var i = 0;
+    var h = 0
+    var j = 0
+    var txt = 'Contato';
+    var txt2 = '/'
+    var txt3 = 'Revista'
+    var speed = 50;
+    
+    function a() {
+      if (i < txt.length) {
+        document.getElementById("contato").innerHTML += txt.charAt(i);
+        i++;
+        timeouts.push(setTimeout(a, speed));
+        
+      }
+    }
+    function b() {
+      if (h < txt.length) {
+        document.getElementById("slash").innerHTML += txt2.charAt(h);
+        h++;
+        timeouts.push(setTimeout(b, speed));
+        
+      }
+    }
+    function c() {
+      if (j < txt.length) {
+        document.getElementById("revista").innerHTML += txt3.charAt(j);
+        j++;
+        timeouts.push(setTimeout(c, speed));
+        
+      }
+    }
+    function d() {
+        if (i > 0) {
+        str = document.getElementById("contato").innerHTML
+        document.getElementById('contato').innerHTML = str.slice(0, -1)
+        i--
+        timeouts.push(setTimeout(d, speed))
+        }
+    }
+    function e() {
+        if (h > 0) {
+        str2 = document.getElementById("slash").innerHTML
+        document.getElementById('slash').innerHTML = str2.slice(0, -1)
+        h--
+        timeouts.push(setTimeout(e, speed))
+        }
+    }
+    function f() {
+        if (j > 0) {
+        str3 = document.getElementById("revista").innerHTML
+        document.getElementById('revista').innerHTML = str3.slice(0, -1)
+        j--
+        timeouts.push(setTimeout(f, speed))
+        }
+    }
+    
+    function escolha() {
+        for (var i=0; i<timeouts.length; i++) {
+  clearTimeout(timeouts[i]);
+}
+h = document.getElementById('slash').innerHTML.length
+j = document.getElementById('revista').innerHTML.length
+        if(ind == 0){ 
+        a()
+        b()
+        c()
+        ind = 1
+        } else {
+           d()
+           e()
+           f()
+            ind = 0
+        }
+    }
+    </script>
+</body>
+
+</html>
